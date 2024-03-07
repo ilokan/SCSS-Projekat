@@ -24,3 +24,14 @@ $boje: (
     "siva": #808080,
     "crna": #000000,
 );
+@each $key,$val in $boje{
+    #boja-#{$key}{
+        background-color:$val;
+    }
+
+    @for $i from 1 through 5{
+        #boja-#{$key}-svijetlija-#{$i}{
+            background-color: mix( white, $val, $i *18%)
+        }
+    }
+};

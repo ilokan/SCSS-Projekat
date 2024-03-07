@@ -1,3 +1,219 @@
+#boja-crvena {
+  background-color: #FF0000;
+}
+
+#boja-crvena-svijetlija-1 {
+  background-color: #ff2e2e;
+}
+
+#boja-crvena-svijetlija-2 {
+  background-color: #ff5c5c;
+}
+
+#boja-crvena-svijetlija-3 {
+  background-color: #ff8a8a;
+}
+
+#boja-crvena-svijetlija-4 {
+  background-color: #ffb8b8;
+}
+
+#boja-crvena-svijetlija-5 {
+  background-color: #ffe6e6;
+}
+
+#boja-roza {
+  background-color: #FFC0CB;
+}
+
+#boja-roza-svijetlija-1 {
+  background-color: #ffcbd4;
+}
+
+#boja-roza-svijetlija-2 {
+  background-color: #ffd7de;
+}
+
+#boja-roza-svijetlija-3 {
+  background-color: #ffe2e7;
+}
+
+#boja-roza-svijetlija-4 {
+  background-color: #ffedf0;
+}
+
+#boja-roza-svijetlija-5 {
+  background-color: #fff9fa;
+}
+
+#boja-narandzasta {
+  background-color: #FFA500;
+}
+
+#boja-narandzasta-svijetlija-1 {
+  background-color: #ffb52e;
+}
+
+#boja-narandzasta-svijetlija-2 {
+  background-color: #ffc55c;
+}
+
+#boja-narandzasta-svijetlija-3 {
+  background-color: #ffd68a;
+}
+
+#boja-narandzasta-svijetlija-4 {
+  background-color: #ffe6b8;
+}
+
+#boja-narandzasta-svijetlija-5 {
+  background-color: #fff6e6;
+}
+
+#boja-zuta {
+  background-color: #FFFF00;
+}
+
+#boja-zuta-svijetlija-1 {
+  background-color: #ffff2e;
+}
+
+#boja-zuta-svijetlija-2 {
+  background-color: #ffff5c;
+}
+
+#boja-zuta-svijetlija-3 {
+  background-color: #ffff8a;
+}
+
+#boja-zuta-svijetlija-4 {
+  background-color: #ffffb8;
+}
+
+#boja-zuta-svijetlija-5 {
+  background-color: #ffffe6;
+}
+
+#boja-zelena {
+  background-color: #008000;
+}
+
+#boja-zelena-svijetlija-1 {
+  background-color: #2e972e;
+}
+
+#boja-zelena-svijetlija-2 {
+  background-color: #5cae5c;
+}
+
+#boja-zelena-svijetlija-3 {
+  background-color: #8ac58a;
+}
+
+#boja-zelena-svijetlija-4 {
+  background-color: #b8dbb8;
+}
+
+#boja-zelena-svijetlija-5 {
+  background-color: #e6f2e6;
+}
+
+#boja-plava {
+  background-color: #0000FF;
+}
+
+#boja-plava-svijetlija-1 {
+  background-color: #2e2eff;
+}
+
+#boja-plava-svijetlija-2 {
+  background-color: #5c5cff;
+}
+
+#boja-plava-svijetlija-3 {
+  background-color: #8a8aff;
+}
+
+#boja-plava-svijetlija-4 {
+  background-color: #b8b8ff;
+}
+
+#boja-plava-svijetlija-5 {
+  background-color: #e6e6ff;
+}
+
+#boja-bijela {
+  background-color: #FFFFFF;
+}
+
+#boja-bijela-svijetlija-1 {
+  background-color: white;
+}
+
+#boja-bijela-svijetlija-2 {
+  background-color: white;
+}
+
+#boja-bijela-svijetlija-3 {
+  background-color: white;
+}
+
+#boja-bijela-svijetlija-4 {
+  background-color: white;
+}
+
+#boja-bijela-svijetlija-5 {
+  background-color: white;
+}
+
+#boja-siva {
+  background-color: #808080;
+}
+
+#boja-siva-svijetlija-1 {
+  background-color: #979797;
+}
+
+#boja-siva-svijetlija-2 {
+  background-color: #aeaeae;
+}
+
+#boja-siva-svijetlija-3 {
+  background-color: #c5c5c5;
+}
+
+#boja-siva-svijetlija-4 {
+  background-color: #dbdbdb;
+}
+
+#boja-siva-svijetlija-5 {
+  background-color: #f2f2f2;
+}
+
+#boja-crna {
+  background-color: #000000;
+}
+
+#boja-crna-svijetlija-1 {
+  background-color: #2e2e2e;
+}
+
+#boja-crna-svijetlija-2 {
+  background-color: #5c5c5c;
+}
+
+#boja-crna-svijetlija-3 {
+  background-color: #8a8a8a;
+}
+
+#boja-crna-svijetlija-4 {
+  background-color: #b8b8b8;
+}
+
+#boja-crna-svijetlija-5 {
+  background-color: #e6e6e6;
+}
+
 nav {
   display: flex;
   position: absolute;
