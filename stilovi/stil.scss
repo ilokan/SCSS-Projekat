@@ -1,6 +1,7 @@
 @use 'varijable'; //Uvoz parcijala.
 @use 'navbar'; //Uvoz parcijala.
 @use 'mixin'; //Uvoz mixina iz drugog fajla.
+@use 'boje';
 
 @mixin reset{
     margin:0;

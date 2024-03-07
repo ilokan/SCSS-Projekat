@@ -1,0 +1,5 @@
+@each $key, $val in $boje{
+    .pozadina-#{$key}{
+        boja: $val
+    }
+}
