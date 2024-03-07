@@ -1,4 +1,3 @@
-@use 'varijable';
 @each $key, $val in $boje{
     .pozadina-#{$key}{
         background-color: $val;
