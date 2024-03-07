@@ -1,0 +1,345 @@
+nav {
+  display: flex;
+  position: absolute;
+  background-color: rgb(137, 226, 255);
+  font-size: xx-large;
+  box-shadow: 0px 2px 5px rgb(148, 148, 148);
+  z-index: 1;
+  width: 100%;
+  height: 95px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 25px;
+  top: 0;
+}
+nav img {
+  width: 120px;
+  height: 120px;
+  margin-top: 30px;
+  margin-left: 22px;
+}
+nav a {
+  text-decoration: none;
+  color: deepskyblue;
+  display: inline-block;
+  transition: 0.3s ease-in-out;
+}
+nav a:active {
+  color: rgb(0, 126, 168);
+}
+nav a:hover {
+  transform: scale(1.2);
+}
+nav li {
+  padding: 5px 2px;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+/* Uklanjanje margina i paddinga osim ako je u novim klasama i
+ drugim elementima postavljena nova vrijednost koja zamjenjuje gore navedene vrijednosti. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-size: cover;
+  background-color: #ffffff;
+  font: 100% Arial;
+}
+
+div {
+  border-radius: 20px;
+  box-shadow: 0px 3px 9px 8px rgb(148, 148, 148);
+  padding: 20px;
+  margin: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 10px 0 10px;
+}
+
+label {
+  margin-bottom: 15px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+form {
+  text-align: center;
+  padding: 50px 10px 50px 10px;
+  border: #b6cdbd solid 5px;
+  border-radius: 10px;
+}
+
+textarea {
+  border: #65d8f5 solid 3px;
+  border-radius: 5px;
+  width: 300px;
+  min-height: 100px;
+}
+
+input {
+  border: #65d8f5 solid 3px;
+  border-radius: 5px;
+  width: 300px;
+  min-height: 30px;
+}
+
+.vjestine, .projekti {
+  padding: 70px 0 0 0;
+  margin: 70px 0 80px 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.vjestine img, .projekti img {
+  width: 800px;
+  height: 496px;
+}
+
+.vjestine-div, .projekti-div {
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 50px;
+}
+.vjestine-div img, .projekti-div img {
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
+}
+.vjestine-div div, .projekti-div div {
+  width: 300px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.vjestine-div div:hover, .projekti-div div:hover {
+  opacity: 1;
+  display: flex;
+}
+
+#tekst {
+  font-size: 24px;
+  margin: 20px;
+  line-height: 175%;
+  padding: 0 20px 0 20px;
+}
+
+#naslov {
+  position: fixed;
+  box-shadow: 0px 5px 5px rgb(148, 148, 148);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: deepskyblue;
+  padding: 7px 12px;
+  text-align: center;
+  background-color: #e8ffef;
+  top: 0;
+}
+
+#forma {
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 10px 20px 10px;
+  width: 50%;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 70px auto 80px auto;
+}
+.hero img {
+  width: 650px;
+  height: 650px;
+  max-width: 100%;
+}
+
+.bio {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.trenutni-link {
+  color: rgb(0, 126, 168);
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 4px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+@media (min-width: 481px) and (max-width: 960px) {
+  .nav-meni {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    right: -100%;
+    height: 100%;
+    top: 0;
+    gap: 10px;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.3s;
+    background-color: rgb(137, 226, 255);
+  }
+  .nav-meni.active {
+    right: 0;
+    padding-top: 50px;
+    width: 50%;
+  }
+  .nav-meni-item {
+    margin-top: 45px;
+  }
+  .hamburger {
+    display: block;
+    background-color: rgb(137, 226, 255);
+    box-shadow: none;
+    border-radius: 10px;
+    margin-right: 0;
+    position: relative;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  .vjestine section, .projekti section {
+    display: flex;
+    align-items: center;
+  }
+  .vjestine img, .projekti img {
+    width: 420px;
+    height: 300px;
+    margin-top: 20px;
+  }
+  #forma {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 20px 50px;
+  }
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 60px auto 80px auto;
+  }
+  .hero img {
+    width: 480px;
+    height: 480px;
+    max-width: 100%;
+  }
+  .bio {
+    width: 250px;
+    border-radius: 10px;
+  }
+}
+@media (max-width: 480px) {
+  #tekst {
+    font-size: 18px;
+  }
+  .nav-meni {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    left: -100%;
+    height: 100%;
+    top: 0;
+    gap: 15px;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.3s;
+    background-color: rgb(137, 226, 255);
+  }
+  .nav-meni.active {
+    left: 0;
+    padding-top: 50px;
+  }
+  .hamburger {
+    display: block;
+    background-color: rgb(137, 226, 255);
+    box-shadow: none;
+    border-radius: 10px;
+    margin-right: 0;
+    position: relative;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  #forma {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 20px;
+  }
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 60px auto 60px auto;
+  }
+  .hero img {
+    width: 480px;
+    height: 460px;
+    max-width: 100%;
+    margin-top: 40px;
+  }
+  .bio {
+    width: 270px;
+    border-radius: 10px;
+    margin-top: 60px;
+  }
+  .vjestine, .projekti {
+    margin-bottom: 107px;
+  }
+  .vjestine img, .projekti img {
+    width: 440px;
+    height: 320px;
+    margin-top: 20px;
+  }
+}/*# sourceMappingURL=stil.css.map */

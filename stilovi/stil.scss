@@ -1,0 +1,301 @@
+@use 'varijable'; //Uvoz parcijala.
+@use 'navbar'; //Uvoz parcijala.
+@use 'mixin'; //Uvoz mixina iz drugog fajla.
+
+@mixin reset{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}/* Uklanjanje margina i paddinga osim ako je u novim klasama i
+  drugim elementima postavljena nova vrijednost koja zamjenjuje gore navedene vrijednosti. */
+
+*{
+    @include reset;//Ovdje se koristi @mixin pod nazivom reset.
+}
+
+body{
+    background-size: cover;
+    background-color: #ffffff;
+    font:100% varijable.$nav-font;
+}
+div{
+    border-radius: 20px;    
+    box-shadow: 0px 3px 9px 8px  rgb(148, 148, 148);
+    padding: 20px;
+    margin:30px 50px;
+    display:flex;
+    justify-content: space-between;
+    background-color:white;
+}
+img{
+    width:200px;
+    height: 200px;
+    max-width: 100%;
+}
+section{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 10px 0 10px;
+}
+label{ 
+    margin-bottom: 15px;
+    font-size:32px;
+    font-weight: bold;
+}
+form{
+    text-align: center;
+    padding: 50px 10px 50px 10px;
+    border: #b6cdbd solid 5px;
+    border-radius: 10px;
+
+}
+textarea{
+    border: #65d8f5 solid 3px;
+    border-radius: 5px;
+    width: 300px;
+    min-height: 100px;
+}
+input{
+    border: #65d8f5 solid 3px;
+    border-radius: 5px;
+    width:300px;
+    min-height: 30px;
+}
+.vjestine, .projekti{
+    
+    padding: 70px 0 0 0;
+    margin: 70px 0 80px 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    img{
+        width: 800px;
+        height: 496px;
+    }
+
+}
+.vjestine-div, .projekti-div{
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 50px;
+    img{
+        width: 200px;
+        height: 200px;
+        max-width: 100%;
+    }
+    div{
+        width: 300px;
+        height: 300px;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out; 
+    }
+    div:hover{
+        opacity: 1;
+        display:flex;
+    }
+}
+#tekst{
+    font-size: varijable.$velicina-fonta;
+    margin:20px;
+    line-height: 175%;
+    padding: 0 20px 0 20px ;
+}
+#naslov{
+    position: fixed;
+        box-shadow: 0px 5px 5px  rgb(148, 148, 148);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        color: varijable.$link-boja;
+        padding: 7px 12px;
+        text-align: center;
+        background-color: #e8ffef;
+        top:0;
+}
+#forma{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 10px 20px 10px;
+    width: 50%;
+    
+}
+
+.hero{
+    @include mixin.hero;
+    img{
+        @include mixin.hero-img;
+    }    
+}
+.bio{
+    @include mixin.hero-bio;
+}
+.trenutni-link{
+    color: varijable.$aktivni;
+}
+.hamburger{
+    display: none;
+}
+.bar{
+    display: block;
+    width: 30px;
+    height: 4px;    
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+@media (min-width: varijable.$tablet-min) and (max-width: varijable.$tablet-max) {
+    .nav-meni{
+        display: flex;
+        position: fixed;
+        width: 100%;
+        right: -100%;
+        height: 100%;
+        top: 0;
+        gap: 10px;
+        flex-direction: column;
+        text-align: center;
+        transition: 0.3s;
+        background-color: varijable.$nav-boja;
+
+    }
+    .nav-meni.active{
+        right: 0;
+        padding-top: 50px;
+        width:50%;
+    }
+    .nav-meni-item{
+        margin-top: 45px;
+    }
+    .hamburger{
+        display: block;
+        background-color: varijable.$nav-boja;
+        box-shadow: none;//Ovdje sam ponistavao prethodno postavljen stil za <div>.
+        border-radius: 10px;
+        margin-right: 0;
+        position: relative;
+    }
+    .hamburger.active .bar:nth-child(2){//Srednji bar u hamburger meniju podesavam da se ne vidi.
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(9px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-9px) rotate(-45deg);
+    }//Prvi i treci bar rotiram i pomjeram da bi dobio X kad je meni aktivan.
+    
+    .vjestine, .projekti{
+        section{
+            display: flex;
+            align-items: center;
+        }
+        img{
+        width: 420px;
+        height: 300px;
+        margin-top: 20px;
+        }
+        
+        
+    }
+    #forma{
+        width: fit-content;
+        padding: 20px 50px;
+
+    }
+    .hero{
+        @include mixin.hero ($margin:60px auto 80px auto);
+        
+        img{
+        @include mixin.hero-img($width:480px, $height:480px)
+            
+        }    
+    }
+    .bio{
+    @include mixin.hero-bio($width:250px)
+   
+    }
+}
+@media (max-width: varijable.$phone){
+    #tekst{
+        font-size: varijable.$velicina-fonta-manja;
+    }
+    .nav-meni{
+        display: flex;
+        position: fixed;
+        width: 100%;
+        left: -100%;
+        height: 100%;
+        top: 0;
+        gap: 15px;
+        flex-direction: column;
+        text-align: center;
+        transition: 0.3s;
+        background-color: varijable.$nav-boja;
+
+    }
+    .nav-meni.active{
+        left: 0;
+        padding-top: 50px;
+    }
+
+    .hamburger{
+        display: block;
+        background-color: varijable.$nav-boja;
+        box-shadow: none;//Ovdje sam ponistavao prethodno postavljen stil za <div>.
+        border-radius: 10px;
+        margin-right: 0;
+        position: relative;
+    }
+    .hamburger.active .bar:nth-child(2){//Srednji bar u hamburger meniju podesavam da se ne vidi.
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(9px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-9px) rotate(-45deg);
+    }//Prvi i treci bar rotiram i pomjeram da bi dobio X kad je meni aktivan.
+    #forma{
+        width: fit-content;
+        padding: 20px;
+    }
+    .hero{
+        @include mixin.hero($margin:60px auto 60px auto);
+        
+        img{
+        @include mixin.hero-img($width:480px, $height:460px);
+            margin-top: 40px;
+        }    
+    }
+    .bio{
+        @include mixin.hero-bio($width:270px);
+        margin-top: 60px;
+    }
+    .vjestine, .projekti{
+        margin-bottom: 107px;
+        img{
+        width: 440px;
+        height: 320px;
+        margin-top: 20px;
+        }
+        
+        
+    }
+    
+
+}
+
+
+
+
+
+

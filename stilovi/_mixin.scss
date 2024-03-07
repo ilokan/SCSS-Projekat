@@ -1,0 +1,19 @@
+@mixin hero($display:flex, $align-items:center, $justify-content:center, $gap:10px, $margin:70px auto 80px auto){
+    display: $display;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    gap:$gap;
+    margin:$margin;
+    
+}
+@mixin hero-img($width:650px, $height:650px, $max-width:100%){
+    
+    width:$width;
+    height:$height;
+    max-width: $max-width;
+    
+}
+@mixin hero-bio($width:300px, $border-radius:10px){
+    width: $width;
+    border-radius: $border-radius;
+}
