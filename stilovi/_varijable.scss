@@ -9,3 +9,18 @@ $tablet-min: 481px;
 $phone: 480px;
 $velicina-fonta:24px;
 $velicina-fonta-manja:$velicina-fonta * 0.75;
+
+
+//Mapa boja
+
+$boje: (
+    "red": #FF0000,
+    "pink": #FFC0CB,
+    "orange": #FFA500,
+    "yellow": #FFFF00,
+    "green": #008000,
+    "blue": #0000FF,
+    "white": #FFFFFF,
+    "gray": #808080,
+    "black": #000000,
+);
