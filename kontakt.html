@@ -6,8 +6,10 @@
     <title>Kontakt</title>
     <link rel="stylesheet" href="./stilovi/stil.css">
     <link rel="icon" href="slike/laptop.png">
+    <script src="script.js"></script>   
 
 </head>
+<div class="loader"></div>  
 <body id="boja-zelena-svijetlija-5">  
     <nav>
         <img src="slike/laptop.png" alt="Laptop">
@@ -24,28 +26,30 @@
         </div>
   </nav>  
   <section>
-    <div id="forma"><label>Kontakt</label>
-        <span id="greska"></span>
+    <div id="forma">
         <form id="form">
-            Ime:<br><br>
-            <input id="name" name="name" type="text" placeholder="Unesite svoje ime." ><br><br><br>
-            Lozinka:<br><br>
-            <input id="password" name="password" type="password" placeholder="Unesite svoju lozinku."><br><br><br>
-            Email:<br><br>
-            <input type="email" placeholder="Unesite email adresu."><br><br><br> 
-            Poruka:<br><br>
-            <textarea placeholder="Unesite svoju poruku."></textarea><br><br>
+            <label>Kontakt</label>
+            <label id="unos" for="name">Ime:</label>
+            <input id="name" name="name" type="text" placeholder="Unesite svoje ime." >
+            <span id="greska"></span>
+            <label id="unos" for="email">Email:</label>
+            <input type="email" id="email" placeholder="Unesite email adresu.">
+            <span id="greska1"></span>
+            <label id="unos" for="textarea">Poruka:</label>
+            <textarea id="text" placeholder="Unesite svoju poruku."></textarea>
+            <span id="greska2"></span>
             <div class="nesto">
-                <button type="submit" class="dugme" value="submit" >Posalji   
+                <button onclick="validacija()" type="submit" class="dugme" value="submit" >Posalji   
                 </button>
-                <img src="slike/check.png" class="kvacica" alt="kvacica">
-                <div class="loader"></div>             
-        </div>
+            </div>
         </form>
-</div>
-</section>
+        <img src="slike/check.png" class="kvacica" alt="kvacica">
+        <p class="natpis">Uspjesno ste poslali poruku!</p>
+    </div>
     
+</section>
+
+
         
-<script src="script.js"></script>   
 </body>
 </html>

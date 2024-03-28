@@ -6,33 +6,37 @@ hamburger.addEventListener("click", () =>{
     navMeni.classList.toggle("active");
 })
 
+
+function validacija(){
+
 const name = document.querySelector("#name");
-const password = document.querySelector("#password");
+const text = document.querySelector("#text");
 const form = document.querySelector("#form");
 const greska = document.querySelector("#greska");
+const email = document.querySelector("#email");
+const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-form.addEventListener('submit', (e) =>{
-    let poruke = []
-    if (name.value == '' || name.value == null){
-        poruke.push('Molimo vas unesite vase ime')
-
-    }
-    if(password.value.length <= 6){
-        poruke.push("Lozinka mora biti duza od 6 karaktera")
-    }
-    if(password.value.length >= 20){
-        poruke.push("Lozinka mora biti kraca od 20 karaktera")
-    }
-    if (poruke.length > 0 ){ // ime.length > 0 provjerava da li ima ikakvih poruka samim tim postoji greska.
-        e.preventDefault()//Ovo korisitim da se ne refresuje sajt svaki put kad kliknem dugme.
-        greska.innerText = poruke.join(", \n  ")
-    }
-})
+    form.addEventListener('submit', (e) =>{
+        if (name.value === '' || name.value == null){
+            e.preventDefault()//Ovo korisitim da se ne refresuje sajt svaki put kad kliknem dugme.
+            greska.innerHTML="Molimo vas unesite vase ime."
+        }
+        if(!email.value.match(regex)){
+            e.preventDefault()
+            greska1.innerHTML="Neispravan email.";
+        }
+        if (text.value === '' || text.value == null){
+            e.preventDefault()
+            greska2.innerHTML="Molimo vas unesite vasu poruku."
+        }
+    })
+}
 
 const d1 = document.querySelector(".dugme");
 const d2 = document.querySelector(".kvacica");
 const d3 = document.querySelector(".loader");
-d1.addEventListener("click", ()=>{
+const d4 = document.querySelector(".natpis");
+d1.addEventListener('click', ()=>{
     d1.style.display = "none";
     d3.style.display = "flex";
     d3.addEventListener('animationend', () =>{
@@ -40,8 +44,42 @@ d1.addEventListener("click", ()=>{
         d3.addEventListener("transitionend", () =>{
             d3.remove(); //Uklanjanje .loader-a
             d2.style.display ="flex";
+            d4.style.display ="flex";
         })
       
     })
 
-})    
+})  
+
+
+
+// function formFetch(){
+// var data =new FormData(form);
+// fetch("",{
+//     method: "post",
+//     body: data
+// })
+// .then(() =>{
+//     const d1 = document.querySelector(".dugme");
+// const d2 = document.querySelector(".kvacica");
+// const d3 = document.querySelector(".loader");
+// d1.addEventListener('click', ()=>{
+//     d1.style.display = "none";
+//     d3.style.display = "flex";
+//     d3.addEventListener('animationend', () =>{
+//         d3.classList.add("loader-hidden");
+//         d3.addEventListener("transitionend", () =>{
+//             d3.remove(); //Uklanjanje .loader-a
+//             d2.style.display ="flex";
+//         })
+      
+//     })
+
+// })    
+
+// });
+// return false;
+
+// }
+
+
