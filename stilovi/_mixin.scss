@@ -1,3 +1,4 @@
+@use "varijable";
 @mixin hero($display:flex, $align-items:center, $justify-content:center, $gap:10px, $margin:70px auto 80px auto){
     display: $display;
     align-items: $align-items;
@@ -16,4 +17,10 @@
 @mixin hero-bio($width:300px, $border-radius:10px){
     width: $width;
     border-radius: $border-radius;
+    background: linear-gradient(to left, varijable.$nav-boja 33%, lighten(varijable.$nav-boja,15%) 66%) right;
+    transition: .5s ease-out;
+    background-size: 200%;
+    &:hover{
+        background-position: left;
+    }
 }

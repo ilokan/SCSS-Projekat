@@ -16,7 +16,7 @@
 
 body{
     background-size: cover;
-    background-color: #ffffff;
+    background-color: varijable.$bg;
     font:100% varijable.$nav-font;
 }
 div{
@@ -47,8 +47,6 @@ label{
 form{
     text-align: center;
     padding: 50px 10px 50px 10px;
-    border: #b6cdbd solid 5px;
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -206,6 +204,7 @@ input{
         top:0;
 }
 #forma{
+    background-color:  #ebebab;
     margin-top: 150px;
     display: flex;
     justify-content: center;

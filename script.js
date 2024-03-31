@@ -32,24 +32,24 @@ const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     })
 }
 
-const d1 = document.querySelector(".dugme");
-const d2 = document.querySelector(".kvacica");
-const d3 = document.querySelector(".loader");
-const d4 = document.querySelector(".natpis");
-d1.addEventListener('click', ()=>{
-    d1.style.display = "none";
-    d3.style.display = "flex";
-    d3.addEventListener('animationend', () =>{
-        d3.classList.add("loader-hidden");
-        d3.addEventListener("transitionend", () =>{
-            d3.remove(); //Uklanjanje .loader-a
-            d2.style.display ="flex";
-            d4.style.display ="flex";
-        })
+// const d1 = document.querySelector(".dugme");
+// const d2 = document.querySelector(".kvacica");
+// const d3 = document.querySelector(".loader");
+// const d4 = document.querySelector(".natpis");
+// d1.addEventListener('click', ()=>{
+//     d1.style.display = "none";
+//     d3.style.display = "flex";
+//     d3.addEventListener('animationend', () =>{
+//         d3.classList.add("loader-hidden");
+//         d3.addEventListener("transitionend", () =>{
+//             d3.remove(); //Uklanjanje .loader-a
+//             d2.style.display ="flex";
+//             d4.style.display ="flex";
+//         })
       
-    })
+//     })
 
-})  
+// })  
 
 
 

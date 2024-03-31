@@ -1,8 +1,9 @@
 $nav-font: Arial;
 $sec: #b6cdbd;
-$nav-boja:rgb(137, 226, 255);
-$link-boja:deepskyblue;
-$aktivni:rgb(0, 126, 168);
+$bg:#dde0ab;
+$nav-boja:#97cba9;
+$link-boja:darken($bg,30%);
+$aktivni:darken($bg, 50%);
 $desktop: 1200px;
 $tablet-max: 960px;
 $tablet-min: 481px;
