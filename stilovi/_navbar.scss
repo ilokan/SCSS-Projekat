@@ -45,3 +45,12 @@ nav{
     }
     
 }
+#povratak{
+    
+    transition: 0.3s ease-in-out;
+    
+    &:hover{//& koristim zbog css da u njemu ne bi bilo razmaka izmedju #povratak i :hover
+        transform: scale(1.1);
+    }
+    
+}

@@ -253,6 +253,13 @@ nav li {
   display: inline-block;
 }
 
+#povratak {
+  transition: 0.3s ease-in-out;
+}
+#povratak:hover {
+  transform: scale(1.1);
+}
+
 /* Uklanjanje margina i paddinga osim ako je u novim klasama i
  drugim elementima postavljena nova vrijednost koja zamjenjuje gore navedene vrijednosti. */
 * {
@@ -299,7 +306,6 @@ label {
 form {
   text-align: center;
   padding: 50px 10px 50px 10px;
-  border: #b6cdbd solid 5px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -329,6 +335,7 @@ input {
   height: 60px;
   color: rgb(165, 47, 47);
   border: 0;
+  background-color: #23c9ff;
   padding: 0;
   border-radius: 20px;
 }
@@ -359,8 +366,8 @@ input {
 }
 
 .loader {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   box-shadow: none;
   display: none;
   justify-content: center;
@@ -472,6 +479,7 @@ input {
 }
 
 #forma {
+  background-color: #e6e6e6;
   margin-top: 150px;
   display: flex;
   justify-content: center;
