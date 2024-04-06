@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @use "varijable";
 nav{
     display: flex;
@@ -55,53 +54,3 @@ nav{
     }
     
 }
-=======
-@use "varijable";
-nav{
-    display: flex;
-    position: absolute;
-    background-color:varijable.$nav-boja ;
-    font-size:xx-large;
-    box-shadow: 0px 2px 5px rgb(148, 148, 148);
-    z-index: 1;
-    width: 100%;
-    height: 95px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2px 25px;
-    top:0;
-    img{
-        width: 120px;
-        height: 120px;
-        margin-top: 30px;
-        margin-left: 22px;
-    }
-    a{
-        text-decoration: none;
-        color:varijable.$link-boja;
-        display:inline-block;
-        transition: 0.3s ease-in-out;
-
-        
-    }
-    
-    a:active{
-        color: rgb(0, 126, 168);
-        
-    }
-    a:hover{
-        transform: scale(1.2);
-        
-    }
-    
-    li{
-        padding: 5px 2px;
-        margin-left: 5px;
-        margin-right: 5px;  
-        display:inline-block;
-
-    }
-    
-}
-
->>>>>>> 30c923606b5f67cf553cacbb790c17bc93cef8d9
