@@ -332,14 +332,21 @@ input {
   align-items: center;
   width: 300px;
   height: 60px;
-  color: rgb(165, 47, 47);
+  background-color: rgb(165, 47, 47);
   border: 0;
   padding: 0;
   border-radius: 20px;
 }
-
+.dugme:disabled {
+  background-color: gray;
+  color: rgb(165, 47, 47);
+}
 .dugme:hover {
   background-color: green;
+}
+.dugme:hover:disabled {
+  background-color: gray;
+  color: rgb(165, 47, 47);
 }
 
 .kvacica {

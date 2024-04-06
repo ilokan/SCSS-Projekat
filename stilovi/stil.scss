@@ -71,13 +71,21 @@ input{
     align-items: center;
     width:300px;
     height: 60px;
-    color:rgb(165, 47, 47);
+    background-color:rgb(165, 47, 47);
     border:0;
     padding: 0;
     border-radius: 20px;
-}
-.dugme:hover{ 
-    background-color: green;
+    &:disabled{
+        background-color: gray;
+        color:rgb(165, 47, 47);
+    }
+    &:hover{ 
+        background-color: green;
+    }
+    &:hover:disabled{
+        background-color: gray;
+        color:rgb(165, 47, 47);
+    }
 }
 .kvacica{
     align-items: center;

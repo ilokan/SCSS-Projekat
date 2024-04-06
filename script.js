@@ -7,30 +7,45 @@ hamburger.addEventListener("click", () =>{
 })
 
 
-function validacija(){
 
 const name = document.querySelector("#name");
 const text = document.querySelector("#text");
 const form = document.querySelector("#form");
 const greska = document.querySelector("#greska");
 const email = document.querySelector("#email");
+const submit = document.querySelector("#submit");
 const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-    form.addEventListener('submit', (e) =>{
-        if (name.value === '' || name.value == null){
-            e.preventDefault()//Ovo korisitim da se ne refresuje sajt svaki put kad kliknem dugme.
-            greska.innerHTML="Molimo vas unesite vase ime."
+function enable(){
+    let clanovi = document.querySelectorAll("#name, #email, #text");
+    let isValid = true;
+    for (var i = 0; i < clanovi.length; i++) {
+        const element = clanovi[i];
+        if(element.value.trim() === "" || element.value === null){
+            isValid = false;
+            break;
         }
-        if(!email.value.match(regex)){
-            e.preventDefault()
-            greska1.innerHTML="Neispravan email.";
-        }
-        if (text.value === '' || text.value == null){
-            e.preventDefault()
-            greska2.innerHTML="Molimo vas unesite vasu poruku."
-        }
-    })
+        
+    }
+    submit.disabled = !isValid;
+
 }
+
+    // form.addEventListener('submit', (e) =>{
+    //     if (name.value === '' || name.value == null){
+    //         e.preventDefault();
+    //         greska.innerHTML="Molimo vas unesite vase ime."
+    //     }
+    //     if(!email.value.match(regex)){
+    //         e.preventDefault();
+    //         greska1.innerHTML="Neispravan email.";
+    //     }
+    //     if (text.value === '' || text.value == null){
+    //         e.preventDefault();
+    //         greska2.innerHTML="Molimo vas unesite vasu poruku."
+    //     }
+    // })
+
 
 // const d1 = document.querySelector(".dugme");
 // const d2 = document.querySelector(".kvacica");

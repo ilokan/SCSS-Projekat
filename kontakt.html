@@ -6,7 +6,6 @@
     <title>Kontakt</title>
     <link rel="stylesheet" href="./stilovi/stil.css">
     <link rel="icon" href="slike/laptop.png">
-    <script src="script.js"></script>   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 </head>
@@ -31,16 +30,16 @@
         <form id="form" action="baza.php" method="post" >
             <label>Kontakt</label>
             <label id="unos" >Ime:</label>
-            <input id="name" name="ime" type="text" placeholder="Unesite svoje ime." >
+            <input id="name" name="ime" type="text" onkeyup="enable()" placeholder="Unesite svoje ime." >
             <span id="greska"></span>
             <label id="unos" >Email:</label>
-            <input type="email"  id="email" name="email" placeholder="Unesite email adresu.">
+            <input type="email"  id="email" name="email" onkeyup="enable()"  placeholder="Unesite email adresu." >
             <span id="greska1"></span>
-            <label id="unos" for="textarea">Poruka:</label>
-            <textarea id="text" name="textarea" placeholder="Unesite svoju poruku."></textarea>
+            <label id="unos">Poruka:</label>
+            <textarea id="text" name="textarea" onkeyup="enable()"  placeholder="Unesite svoju poruku." ></textarea>
             <span id="greska2"></span>
             <div class="nesto">
-                <button onclick="validacija()" type="submit" class="dugme" value="submit" >Posalji   
+                <button disabled id="submit" type="submit" class="dugme" value="submit" >Posalji   
                 </button>
             </div>
         </form>
@@ -53,6 +52,7 @@
         $('.sadrzaj').fadeOut();
         $('#loader').fadeIn();
     })
- </script>       
+ </script>  
+<script src="script.js"></script>        
 </body>
 </html>
