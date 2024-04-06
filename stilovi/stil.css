@@ -217,7 +217,7 @@
 nav {
   display: flex;
   position: absolute;
-  background-color: rgb(137, 226, 255);
+  background-color: #97cba9;
   font-size: xx-large;
   box-shadow: 0px 2px 5px rgb(148, 148, 148);
   z-index: 1;
@@ -236,7 +236,7 @@ nav img {
 }
 nav a {
   text-decoration: none;
-  color: deepskyblue;
+  color: #aab141;
   display: inline-block;
   transition: 0.3s ease-in-out;
 }
@@ -270,7 +270,7 @@ nav li {
 
 body {
   background-size: cover;
-  background-color: #ffffff;
+  background-color: #dde0ab;
   font: 100% Arial;
 }
 
@@ -306,7 +306,10 @@ label {
 form {
   text-align: center;
   padding: 50px 10px 50px 10px;
+<<<<<<< HEAD
   border-radius: 10px;
+=======
+>>>>>>> 30c923606b5f67cf553cacbb790c17bc93cef8d9
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -471,7 +474,7 @@ input {
   box-shadow: 0px 5px 5px rgb(148, 148, 148);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  color: deepskyblue;
+  color: #aab141;
   padding: 7px 12px;
   text-align: center;
   background-color: #e8ffef;
@@ -479,7 +482,11 @@ input {
 }
 
 #forma {
+<<<<<<< HEAD
   background-color: #e6e6e6;
+=======
+  background-color: #ebebab;
+>>>>>>> 30c923606b5f67cf553cacbb790c17bc93cef8d9
   margin-top: 150px;
   display: flex;
   justify-content: center;
@@ -506,10 +513,16 @@ input {
 .bio {
   width: 300px;
   border-radius: 10px;
+  background: linear-gradient(to left, #97cba9 33%, #cae5d3 66%) right;
+  transition: 0.5s ease-out;
+  background-size: 200%;
+}
+.bio:hover {
+  background-position: left;
 }
 
 .trenutni-link {
-  color: rgb(0, 126, 168);
+  color: #636626;
 }
 
 .hamburger {
@@ -537,7 +550,7 @@ input {
     flex-direction: column;
     text-align: center;
     transition: 0.3s;
-    background-color: rgb(137, 226, 255);
+    background-color: #97cba9;
   }
   .nav-meni.active {
     right: 0;
@@ -549,7 +562,7 @@ input {
   }
   .hamburger {
     display: block;
-    background-color: rgb(137, 226, 255);
+    background-color: #97cba9;
     box-shadow: none;
     border-radius: 10px;
     margin-right: 0;
@@ -593,6 +606,12 @@ input {
   .bio {
     width: 250px;
     border-radius: 10px;
+    background: linear-gradient(to left, #97cba9 33%, #cae5d3 66%) right;
+    transition: 0.5s ease-out;
+    background-size: 200%;
+  }
+  .bio:hover {
+    background-position: left;
   }
 }
 @media (max-width: 480px) {
@@ -610,7 +629,7 @@ input {
     flex-direction: column;
     text-align: center;
     transition: 0.3s;
-    background-color: rgb(137, 226, 255);
+    background-color: #97cba9;
   }
   .nav-meni.active {
     left: 0;
@@ -618,7 +637,7 @@ input {
   }
   .hamburger {
     display: block;
-    background-color: rgb(137, 226, 255);
+    background-color: #97cba9;
     box-shadow: none;
     border-radius: 10px;
     margin-right: 0;
@@ -654,7 +673,13 @@ input {
   .bio {
     width: 270px;
     border-radius: 10px;
+    background: linear-gradient(to left, #97cba9 33%, #cae5d3 66%) right;
+    transition: 0.5s ease-out;
+    background-size: 200%;
     margin-top: 60px;
+  }
+  .bio:hover {
+    background-position: left;
   }
   .vjestine, .projekti {
     margin-bottom: 107px;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $nav-font: Arial;
 $sec: #b6cdbd;
 $nav-boja:rgb(137, 226, 255);
@@ -35,3 +36,43 @@ $boje: (
         }
     }
 };
+=======
+$nav-font: Arial;
+$sec: #b6cdbd;
+$bg:#dde0ab;
+$nav-boja:#97cba9;
+$link-boja:darken($bg,30%);
+$aktivni:darken($bg, 50%);
+$desktop: 1200px;
+$tablet-max: 960px;
+$tablet-min: 481px;
+$phone: 480px;
+$velicina-fonta:24px;
+$velicina-fonta-manja:$velicina-fonta * 0.75;
+
+
+//Mapa boja
+
+$boje: (
+    "crvena": #FF0000,
+    "roza": #FFC0CB,
+    "narandzasta": #FFA500,
+    "zuta": #FFFF00,
+    "zelena": #008000,
+    "plava": #0000FF,
+    "bijela": #FFFFFF,
+    "siva": #808080,
+    "crna": #000000,
+);
+@each $key,$val in $boje{
+    #boja-#{$key}{
+        background-color:$val;
+    }
+
+    @for $i from 1 through 5{
+        #boja-#{$key}-svijetlija-#{$i}{
+            background-color: mix( white, $val, $i *18%)
+        }
+    }
+};
+>>>>>>> 30c923606b5f67cf553cacbb790c17bc93cef8d9
