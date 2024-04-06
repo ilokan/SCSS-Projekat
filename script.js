@@ -17,17 +17,17 @@ const submit = document.querySelector("#submit");
 const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
 function enable(){
+    submit.disabled = true;
     let clanovi = document.querySelectorAll("#name, #email, #text");
-    let isValid = true;
     for (var i = 0; i < clanovi.length; i++) {
         const element = clanovi[i];
         if(element.value.trim() === "" || element.value === null){
-            isValid = false;
-            break;
+            submit.disabled = true;
+        }else{
+            submit.disabled = false;
         }
         
     }
-    submit.disabled = !isValid;
 
 }
 
