@@ -49,7 +49,15 @@ $(document).ready(function() {
                 $("#ucitavanje").addClass("loader");
                 $("#ucitavanje").on('animationend',function(){
                     $(this).addClass("loader-hidden");
+                    $("#ucitavanje").on("transitionend", function(){
+                        $(this).removeClass("loader loader-hidden");
+                        $(this).append("<img src='slike/check.png'/>");
+                        $(this).append("<h1>Uspjesno ste poslali vasu poruku!</h2>");
+
+                    });
                 });
+               
+                //$("#ucitavanje").addClass("kvacica");
             }
             
        })

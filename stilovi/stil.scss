@@ -94,7 +94,7 @@ input{
     height: 80px;
     border-radius: 0;
     box-shadow: none;
-    display: none;
+    display: flex;
 
 }
 .nesto{
@@ -111,18 +111,18 @@ input{
 .loader{
     position: absolute;
     display: flex;
-    width: 300px;
-    height: 60px;
+    width: 400px;
+    height: 400px;
     border-radius: 0;
     align-items: center;
     justify-content: center;
     transition: visibility 2.5s, opacity 2.5s;
     &::after{  //& koristim da bi css bio loader::after umjesto loader ::after
         content: "";
-        width: 30px;
-        height: 30px;
+        width: 150px;
+        height: 150px;
         border: 15px solid #dddddd;
-        border-top-color: #009578;
+        border-top-color: #0dbe03;
         border-radius: 50%;
     animation: loading  3s ease  ;
     }
@@ -146,6 +146,11 @@ input{
 #ucitavanje{
     background: transparent;
     box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
 }
 // #greska, #greska1, #greska2{
 //     display: flex;
@@ -225,7 +230,7 @@ input{
     flex-direction: column;
     padding: 20px 10px 20px 10px;
     width: 50%;
-    min-height: 673px;
+    min-height: 705px;
     
 }
 
