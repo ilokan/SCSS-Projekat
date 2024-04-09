@@ -60,6 +60,7 @@ $(document).ready(function() {
                 //$("#ucitavanje").addClass("kvacica");
             }
             
+            
        })
             e.preventDefault();
         })
