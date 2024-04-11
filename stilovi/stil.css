@@ -312,26 +312,64 @@ label {
 }
 
 form {
+  background-color: transparent;
   text-align: center;
-  padding: 50px 10px 50px 10px;
+  padding: 50px 0 50px 0;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  row-gap: 15px;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+form label {
+  flex-basis: 100%;
 }
 
 textarea {
-  border: #65d8f5 solid 3px;
-  border-radius: 5px;
-  width: 300px;
-  min-height: 100px;
+  border: #ffb031 solid 3px;
+  border-radius: 8px;
+  width: 673px;
+  min-height: 150px;
 }
 
 input {
-  border: #65d8f5 solid 3px;
-  border-radius: 5px;
-  width: 300px;
-  min-height: 30px;
+  border: #ffb031 solid 3px;
+  border-radius: 8px;
+  width: 320px;
+  min-height: 60px;
+}
+
+#div-ime, #div-email {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  box-shadow: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-basis: 50%;
+  row-gap: 15px;
+}
+
+#poruka {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 15px;
+  background-color: transparent;
+  box-shadow: none;
+  align-items: flex-start;
 }
 
 .dugme {
@@ -367,7 +405,7 @@ input {
   display: flex;
 }
 
-.nesto {
+#nesto {
   box-shadow: none;
   border-radius: 20px;
   padding: 0;
@@ -437,23 +475,39 @@ input {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 0;
+  margin-top: 200px;
   padding-top: 50px;
+  padding-bottom: 100px;
+  overflow: visible;
+}
+
+.kartica {
+  position: relative;
+  background-color: #FAF9F6;
+  border-radius: 10px;
+  margin: 20px;
+  padding-top: 10px;
+  padding-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.kartica img {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  top: -50px;
 }
 
 .pozadina {
   box-shadow: none;
   border: 0;
-  background-color: #FAF9F6;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 0;
   padding-bottom: 0;
-}
-.pozadina img {
-  width: 600px;
-  height: 300px;
 }
 
 .vjestine, .projekti {
@@ -519,16 +573,25 @@ input {
   top: 0;
 }
 
-#forma {
-  background-color: #ebebab;
-  margin-top: 150px;
+#kontakt {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  padding: 20px 10px 20px 10px;
-  width: 50%;
-  min-height: 705px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  box-shadow: none;
+  background-color: #FAF9F6;
+}
+#kontakt img {
+  width: 150px;
+  height: 150px;
+}
+
+#x, #reload {
+  margin: 20px;
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
 }
 
 .hero {

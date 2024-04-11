@@ -9,41 +9,37 @@
 
 </head>
 <body>
-    <nav>
-        <a id="povratak" href="index.html"><img src="slike/laptop.png" alt="Laptop"></a>
-        <ul class="nav-meni">
-            <li class="nav-meni-item"><a href="index.html">O meni</a></li>
-            <li class="nav-meni-item"><a href="vjestine.html">Vještine</a></li>
-            <li class="nav-meni-item"><a href="projekti.html">Projekti</a></li>
-            <li class="nav-meni-item"><a href="kontakt.html" class="trenutni-link">Kontakt</a></li>
-        </ul>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-  </nav>  
+    <div id="kontakt">
+        <hr width="30%">
+        <a id="x" href="index.html">&#10006;</a>
+        <img src="slike/avatar.png" alt="">
+        <a id="reload" href="kontakt.html">&#8634;</a>
+        <hr width="30%">
+    </div>
   <section>
-    <div id="forma">
         <form id="form" action="baza.php" method="post" >
             <label>Kontakt</label>
+            <div id="div-ime">
             <label id="unos" >Ime:</label>
-            <input id="name" name="ime" type="text" onkeyup="enable()" placeholder="Unesite svoje ime." >
-            <!-- <span id="greska"></span> -->
+            <input id="name" name="ime" type="text" onkeyup="enable()" >
+            </div>
+            <div id="div-email">
             <label id="unos" >Email:</label>
-            <input type="email"  id="email" name="email" onkeyup="enable()" placeholder="Unesite email adresu." >
-            <!-- <span id="greska1"></span> -->
+            <input type="email"  id="email" name="email" onkeyup="enable()" >
+            </div>
+            <div id="poruka">
             <label id="unos">Poruka:</label>
-            <textarea id="text" name="textarea" onkeyup="enable()"  placeholder="Unesite svoju poruku." ></textarea>
-            <!-- <span id="greska2"></span> -->
-            <div class="nesto">
+            <textarea id="text" name="textarea" onkeyup="enable()"></textarea>
+            </div>
+
+            <div id="nesto">
+                
                 <button disabled id="submit"  type="submit" class="dugme" value="submit" >Posalji   
                 </button>
-                
             </div>
+
         </form>
         
-    </div>    
 </section>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
 integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
