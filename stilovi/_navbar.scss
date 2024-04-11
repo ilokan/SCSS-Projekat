@@ -4,53 +4,55 @@ nav{
     position: absolute;
     background-color: varijable.$nav-boja;
     font-size:xx-large;
-    box-shadow: 0px 2px 5px rgb(148, 148, 148);
+    box-shadow:none;
     z-index: 1;
     width: 100%;
-    height: 95px;
+    height: 105px;
     justify-content: space-between;
     align-items: center;
-    padding: 2px 25px;
+    padding: 25px 25px 30px 25px;
     top:0;
+    border:0;
     img{
         width: 120px;
         height: 120px;
         margin-top: 30px;
-        margin-left: 22px;
+        transition: 0.3s ease-in-out;
+        &:hover{
+            transform: scale(1.1);
+
+        }
     }
     a{
         text-decoration: none;
-        color:varijable.$link-boja;
+        color:#ffb031;
         display:inline-block;
         transition: 0.3s ease-in-out;
+        border: 3px solid #ffb031;
+        border-radius: 30px ;
+        padding: 10px;
 
-        
+        &:hover{
+            background-color: #ffb031;
+            color: varijable.$bg;
+            border-radius: 30px ;
+        }
     }
-    
-    a:active{
-        color: rgb(0, 126, 168);
-        
-    }
-    a:hover{
-        transform: scale(1.2);
-        
-    }
-    
     li{
-        padding: 5px 2px;
         margin-left: 5px;
         margin-right: 5px;  
         display:inline-block;
+        font-size: varijable.$velicina-fonta;
 
     }
     
 }
 #povratak{
-    
-    transition: 0.3s ease-in-out;
-    
-    &:hover{//& koristim zbog css da u njemu ne bi bilo razmaka izmedju #povratak i :hover
-        transform: scale(1.1);
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffb031;
+    padding-left: 20px;
+    padding-right: 20px;
     
 }

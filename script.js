@@ -33,7 +33,6 @@ function enable(){
 
 }
 
-const loader = document.querySelector(".loader");
 
 
 $(document).ready(function() {

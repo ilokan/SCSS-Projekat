@@ -217,47 +217,55 @@
 nav {
   display: flex;
   position: absolute;
-  background-color: #97cba9;
+  background-color: #FAF9F6;
   font-size: xx-large;
-  box-shadow: 0px 2px 5px rgb(148, 148, 148);
+  box-shadow: none;
   z-index: 1;
   width: 100%;
-  height: 95px;
+  height: 105px;
   justify-content: space-between;
   align-items: center;
-  padding: 2px 25px;
+  padding: 25px 25px 30px 25px;
   top: 0;
+  border: 0;
 }
 nav img {
   width: 120px;
   height: 120px;
   margin-top: 30px;
-  margin-left: 22px;
+  transition: 0.3s ease-in-out;
+}
+nav img:hover {
+  transform: scale(1.1);
 }
 nav a {
   text-decoration: none;
-  color: #aab141;
+  color: #ffb031;
   display: inline-block;
   transition: 0.3s ease-in-out;
-}
-nav a:active {
-  color: rgb(0, 126, 168);
+  border: 3px solid #ffb031;
+  border-radius: 30px;
+  padding: 10px;
 }
 nav a:hover {
-  transform: scale(1.2);
+  background-color: #ffb031;
+  color: #FAF9F6;
+  border-radius: 30px;
 }
 nav li {
-  padding: 5px 2px;
   margin-left: 5px;
   margin-right: 5px;
   display: inline-block;
+  font-size: 24px;
 }
 
 #povratak {
-  transition: 0.3s ease-in-out;
-}
-#povratak:hover {
-  transform: scale(1.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffb031;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Uklanjanje margina i paddinga osim ako je u novim klasama i
@@ -270,7 +278,7 @@ nav li {
 
 body {
   background-size: cover;
-  background-color: #dde0ab;
+  background-color: #FAF9F6;
   font: 100% Arial;
 }
 
@@ -423,6 +431,31 @@ input {
   row-gap: 20px;
 }
 
+.omeni {
+  background-color: #ffb031;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 0;
+  padding-top: 50px;
+}
+
+.pozadina {
+  box-shadow: none;
+  border: 0;
+  background-color: #FAF9F6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.pozadina img {
+  width: 600px;
+  height: 300px;
+}
+
 .vjestine, .projekti {
   padding: 70px 0 0 0;
   margin: 70px 0 80px 0;
@@ -479,10 +512,10 @@ input {
   box-shadow: 0px 5px 5px rgb(148, 148, 148);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  color: #aab141;
+  color: #c3b794;
   padding: 7px 12px;
   text-align: center;
-  background-color: #e8ffef;
+  background-color: #FAF9F6;
   top: 0;
 }
 
@@ -502,28 +535,36 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  margin: 70px auto 80px auto;
+  flex-direction: column-reverse;
+  gap: 0;
+  margin: 90px auto 80px auto;
 }
 .hero img {
-  width: 650px;
-  height: 650px;
+  width: 300px;
+  height: 300px;
   max-width: 100%;
 }
 
 .bio {
-  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  font: 31.2px Arial;
+  width: 600px;
   border-radius: 10px;
-  background: linear-gradient(to left, #97cba9 33%, #cae5d3 66%) right;
-  transition: 0.5s ease-out;
-  background-size: 200%;
+  background: transparent;
+  margin-bottom: 0;
+  box-shadow: none;
 }
-.bio:hover {
-  background-position: left;
+.bio h1 {
+  font-size: 60px;
 }
 
 .trenutni-link {
-  color: #636626;
+  color: brown;
+  background-color: #ffb031;
 }
 
 .hamburger {
@@ -551,7 +592,7 @@ input {
     flex-direction: column;
     text-align: center;
     transition: 0.3s;
-    background-color: #97cba9;
+    background-color: #FAF9F6;
   }
   .nav-meni.active {
     right: 0;
@@ -563,7 +604,7 @@ input {
   }
   .hamburger {
     display: block;
-    background-color: #97cba9;
+    background-color: #FAF9F6;
     box-shadow: none;
     border-radius: 10px;
     margin-right: 0;
@@ -596,7 +637,8 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    flex-direction: column-reverse;
+    gap: 0;
     margin: 60px auto 80px auto;
   }
   .hero img {
@@ -605,14 +647,20 @@ input {
     max-width: 100%;
   }
   .bio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    font: 31.2px Arial;
     width: 250px;
     border-radius: 10px;
-    background: linear-gradient(to left, #97cba9 33%, #cae5d3 66%) right;
-    transition: 0.5s ease-out;
-    background-size: 200%;
+    background: transparent;
+    margin-bottom: 0;
+    box-shadow: none;
   }
-  .bio:hover {
-    background-position: left;
+  .bio h1 {
+    font-size: 60px;
   }
 }
 @media (max-width: 480px) {
@@ -630,7 +678,7 @@ input {
     flex-direction: column;
     text-align: center;
     transition: 0.3s;
-    background-color: #97cba9;
+    background-color: #FAF9F6;
   }
   .nav-meni.active {
     left: 0;
@@ -638,7 +686,7 @@ input {
   }
   .hamburger {
     display: block;
-    background-color: #97cba9;
+    background-color: #FAF9F6;
     box-shadow: none;
     border-radius: 10px;
     margin-right: 0;
@@ -662,7 +710,8 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    flex-direction: column-reverse;
+    gap: 0;
     margin: 60px auto 60px auto;
   }
   .hero img {
@@ -672,15 +721,21 @@ input {
     margin-top: 40px;
   }
   .bio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    font: 31.2px Arial;
     width: 270px;
     border-radius: 10px;
-    background: linear-gradient(to left, #97cba9 33%, #cae5d3 66%) right;
-    transition: 0.5s ease-out;
-    background-size: 200%;
+    background: transparent;
+    margin-bottom: 0;
+    box-shadow: none;
     margin-top: 60px;
   }
-  .bio:hover {
-    background-position: left;
+  .bio h1 {
+    font-size: 60px;
   }
   .vjestine, .projekti {
     margin-bottom: 107px;

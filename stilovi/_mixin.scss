@@ -1,26 +1,32 @@
 @use "varijable";
-@mixin hero($display:flex, $align-items:center, $justify-content:center, $gap:10px, $margin:70px auto 80px auto){
-    display: $display;
-    align-items: $align-items;
-    justify-content: $justify-content;
+@mixin hero($gap:0, $margin:90px auto 80px auto){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
     gap:$gap;
     margin:$margin;
     
 }
-@mixin hero-img($width:650px, $height:650px, $max-width:100%){
+@mixin hero-img($width:300px, $height:300px, $max-width:100%){
     
     width:$width;
     height:$height;
     max-width: $max-width;
     
 }
-@mixin hero-bio($width:300px, $border-radius:10px){
+@mixin hero-bio($font:varijable.$velicina-fonta * 1.3 varijable.$nav-font , $width:600px, $border-radius:10px){
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    h1{font-size:60px;}
+    font:$font;
     width: $width;
     border-radius: $border-radius;
-    background: linear-gradient(to left, varijable.$nav-boja 33%, lighten(varijable.$nav-boja,15%) 66%) right;
-    transition: .5s ease-out;
-    background-size: 200%;
-    &:hover{
-        background-position: left;
-    }
+    background: transparent;
+    margin-bottom: 0;
+    box-shadow: none;
+
 }
