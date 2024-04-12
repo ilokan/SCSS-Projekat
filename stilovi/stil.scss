@@ -250,11 +250,34 @@ input{
 
 }
 .vjestine-div, .projekti-div{
+    position: relative;
+    overflow: hidden;
     justify-content: center;
     align-items: center;
     width: 300px;
     height: 300px;
     margin-bottom: 50px;
+    &::before {
+		background: linear-gradient(to right,fade_in(#fff, 1) 0%,fade_in(#fff, 0.7) 100%);
+        content: "";
+		height: 100%;
+		left: -75%;
+		position: absolute;
+		top: 0;
+		transform: skewX(-25deg);
+		width: 15%;
+		z-index: 2;
+    }
+    &:hover{
+        &::before{
+        animation: odsjaj 1s;
+        }
+    }
+    @keyframes odsjaj{
+        100%{
+            left: 125%;
+        }
+    }
     img{
         width: 200px;
         height: 200px;

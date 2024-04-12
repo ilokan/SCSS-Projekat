@@ -523,11 +523,32 @@ input {
 }
 
 .vjestine-div, .projekti-div {
+  position: relative;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
   width: 300px;
   height: 300px;
   margin-bottom: 50px;
+}
+.vjestine-div::before, .projekti-div::before {
+  background: linear-gradient(to right, white 0%, white 100%);
+  content: "";
+  height: 100%;
+  left: -75%;
+  position: absolute;
+  top: 0;
+  transform: skewX(-25deg);
+  width: 15%;
+  z-index: 2;
+}
+.vjestine-div:hover::before, .projekti-div:hover::before {
+  animation: odsjaj 1s;
+}
+@keyframes odsjaj {
+  100% {
+    left: 125%;
+  }
 }
 .vjestine-div img, .projekti-div img {
   width: 200px;
