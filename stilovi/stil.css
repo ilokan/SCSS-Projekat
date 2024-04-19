@@ -220,7 +220,7 @@ nav {
   background-color: #FAF9F6;
   font-size: xx-large;
   box-shadow: none;
-  z-index: 1;
+  z-index: 11;
   width: 100%;
   height: 105px;
   justify-content: space-between;
@@ -339,6 +339,7 @@ input {
   border-radius: 8px;
   width: 320px;
   min-height: 60px;
+  margin-right: 0;
 }
 
 #div-ime, #div-email {
@@ -352,8 +353,14 @@ input {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  flex-basis: 50%;
+  flex-basis: 49%;
   row-gap: 15px;
+}
+
+#div-email {
+  margin-right: 0;
+  padding-right: 0;
+  margin-left: 13px;
 }
 
 #poruka {
@@ -522,7 +529,7 @@ input {
   height: 496px;
 }
 
-.vjestine-div, .projekti-div {
+.vjestine-div {
   position: relative;
   overflow: hidden;
   justify-content: center;
@@ -531,7 +538,7 @@ input {
   height: 300px;
   margin-bottom: 50px;
 }
-.vjestine-div::before, .projekti-div::before {
+.vjestine-div::before {
   background: linear-gradient(to right, white 0%, white 100%);
   content: "";
   height: 100%;
@@ -542,7 +549,7 @@ input {
   width: 15%;
   z-index: 2;
 }
-.vjestine-div:hover::before, .projekti-div:hover::before {
+.vjestine-div:hover::before {
   animation: odsjaj 1s;
 }
 @keyframes odsjaj {
@@ -550,12 +557,32 @@ input {
     left: 125%;
   }
 }
-.vjestine-div img, .projekti-div img {
+.vjestine-div img {
   width: 200px;
   height: 200px;
   max-width: 100%;
 }
-.vjestine-div div, .projekti-div div {
+.vjestine-div div {
+  width: 300px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.div-projekti {
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+}
+.div-projekti img {
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
+}
+.div-projekti div {
+  font-size: 24px;
   width: 300px;
   height: 300px;
   justify-content: center;
@@ -564,7 +591,7 @@ input {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
-.vjestine-div div:hover, .projekti-div div:hover {
+.div-projekti div:hover {
   opacity: 1;
   display: flex;
 }
@@ -592,6 +619,7 @@ input {
   text-align: center;
   background-color: #FAF9F6;
   top: 0;
+  z-index: 10;
 }
 
 #kontakt {

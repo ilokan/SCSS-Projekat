@@ -71,6 +71,7 @@ input{
     border-radius: 8px;
     width:320px;
     min-height: 60px;
+    margin-right: 0;
 }
 #div-ime, #div-email{
     margin-left: 0;
@@ -83,8 +84,13 @@ input{
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    flex-basis: 50%;
+    flex-basis: 49%;
     row-gap: 15px;
+}
+#div-email{
+    margin-right: 0;
+    padding-right: 0;
+    margin-left: 13px;
 }
 #poruka{
     margin-left: 0;
@@ -249,7 +255,7 @@ input{
     }
 
 }
-.vjestine-div, .projekti-div{
+.vjestine-div{
     position: relative;
     overflow: hidden;
     justify-content: center;
@@ -289,6 +295,31 @@ input{
         justify-content: center;
         align-items: center;
         position: absolute;
+        // opacity: 0;
+        // transition: opacity 0.5s ease-in-out; 
+    }
+    // div:hover{
+    //     opacity: 1;
+    //     display:flex;
+    // }
+}
+.div-projekti{
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    img{
+        width: 200px;
+        height: 200px;
+        max-width: 100%;
+    }
+    div{
+        font-size: varijable.$velicina-fonta;
+        width: 300px;
+        height: 300px;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
         opacity: 0;
         transition: opacity 0.5s ease-in-out; 
     }
@@ -319,6 +350,7 @@ input{
         text-align: center;
         background-color: #FAF9F6;
         top:0;
+        z-index: 10;
 }
 
 #kontakt{
