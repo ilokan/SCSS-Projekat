@@ -61,13 +61,13 @@ form{
 
 }
 textarea{
-    border: #ffb031 solid 3px;
+    border: varijable.$boja-forma-ivica;
     border-radius: 8px;
     width: 673px;
     min-height: 150px;
 }
 input{
-    border: #ffb031 solid 3px;
+    border: varijable.$boja-forma-ivica;
     border-radius: 8px;
     width:320px;
     min-height: 60px;
